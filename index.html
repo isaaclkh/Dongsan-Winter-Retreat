@@ -3,82 +3,134 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>⛪ 2026 동계수련회 | 동산비전교회</title>
+  <title>2026 동계수련회 | 동산비전교회</title>
+
+  <!-- 파비콘(아이콘) 추가하고 싶으면 여기에 -->
+  <link rel="shortcut icon" type="image/x-icon" href="church.ico" />
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="app" id="app">
-    <!-- Hero -->
-    <header class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="blobs">
-        <span class="blob b1"></span>
-        <span class="blob b2"></span>
-        <span class="blob b3"></span>
-        <span class="blob b4"></span>
-      </div>
-    </div>
-  
-    <div class="stars" id="stars" aria-hidden="true"></div>
-  
-    <div class="hero-inner" id="heroInner">
-      <p class="kicker">Dongsan Vision Church Youth</p>
-      <p class="subkicker">2026 Winter Retreat</p>
-  
-      <h1 class="title">
-        요셉의 삶을<br />
-        <span class="grad">벤치마킹하라</span>
-      </h1>
-  
-      <div class="divider"></div>
-  
-      <!-- NEW: quote만 글래스 카드 -->
-      <div class="quote-card">
-        <p class="quote">
-          "당신들이 나를 이 곳에 팔았다고 해서 근심하지 마소서 한탄하지 마소서 하나님이 생명을 구원하시려고 나를 당신들보다 먼저 보내셨나이다"<br />
-          <span class="quote-ref">창세기 45:5</span>
-        </p>
-      </div>
-    </div>
-  </header>
-
-
-    <!-- Main -->
-    <main class="main">
-      <!-- Date / Location -->
-      <section class="grid" aria-label="수련회 기본 정보">
-        <div class="info">
-          <div class="iconbox blue" aria-hidden="true">📅</div>
-          <div class="meta">
-            <div class="label">일시</div>
-            <div class="value" id="dateText">2026. 01. 23 (금) - 25 (주)</div>
-          </div>
-        </div>
-
-        <div class="info">
-          <div class="iconbox amber" aria-hidden="true">📍</div>
-          <div class="meta">
-            <div class="label">장소</div>
-            <div class="value" id="locText">동산비전교회</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Program -->
-      <section aria-label="프로그램">
-        <div class="section-title"><span aria-hidden="true">⏰</span> PROGRAM</div>
-        <div class="program" id="program"></div>
-      </section>
-
-      <!-- CTA -->
-      <section class="cta-wrap" aria-label="등록">
-        <button class="cta" id="registerBtn" type="button">
-          <span>지금 바로 등록하기</span>
-          <span aria-hidden="true">✅</span>
-        </button>
-      </section>
-    </main>
+  <!-- 전체 배경 블러 -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
   </div>
+
+  <main id="scrollRoot" class="snap-root">
+
+    <!-- ===== PAGE 1: HERO ===== -->
+    <section class="snap page hero" aria-label="수련회 소개">
+      <div class="hero-center">
+        <p class="kicker">Dongsan Vision Church</p>
+        <p class="subkicker">2026 Winter Retreat</p>
+
+        <h1 class="title">
+          요셉의 삶을
+          <br/>
+          <span class="grad">벤치마킹</span>
+          하라
+        </h1>
+
+        <div class="divider"></div>
+
+        <!-- 말씀: 크게 + 카드 -->
+        <div class="quote-card">
+          <p class="quote">
+            "당신들이 나를 이 곳에 팔았다고 해서 근심하지 마소서 한탄하지 마소서
+            하나님이 생명을 구원하시려고 나를 당신들보다 먼저 보내셨나이다"
+          </p>
+          <div class="quote-ref">창세기 45:5</div>
+        </div>
+
+        <!-- 스크롤 유도 -->
+        <div class="scroll-hint" aria-hidden="true">
+          <div class="mouse"></div>
+          <div class="hint-text">스크롤하여 다음 내용 보기</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 2: CONTENT ===== -->
+    <section class="snap page content" aria-label="수련회 상세 정보">
+      <div class="content-wrap">
+
+        <div class="content-head">
+          <h2 class="content-title">수련회 안내</h2>
+          <p class="content-sub">일정 · 장소 · 프로그램</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">📅</div>
+            <div>
+              <div class="card-label">일시</div>
+              <div class="card-value">2026. 01. 23 (금) - 25 (주)</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📍</div>
+            <div>
+              <div class="card-label">장소</div>
+              <div class="card-value">동산비전교회</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-block">
+          <div class="program-title">⏰ PROGRAM</div>
+
+          <div class="program">
+            <div class="day">
+              <div class="day-head">
+                <div class="day-name">1일차 (금)</div>
+                <div class="day-tag">꿈의 시작</div>
+              </div>
+              <ul class="items">
+                <li><span class="dot"></span> 19:00 경배와 찬양 예배</li>
+                <li><span class="dot"></span> 21:00 기도회</li>
+              </ul>
+            </div>
+
+            <div class="day">
+              <div class="day-head">
+                <div class="day-name">2일차 (토)</div>
+                <div class="day-tag">연단의 시간</div>
+              </div>
+              <ul class="items">
+                <li><span class="dot"></span> 10:00 강의 성경 파노라마</li>
+                <li><span class="dot"></span> 14:00 특강 프로그램</li>
+                <li><span class="dot"></span> 19:00 저녁 집회</li>
+              </ul>
+            </div>
+
+            <div class="day">
+              <div class="day-head">
+                <div class="day-name">3일차 (주)</div>
+                <div class="day-tag">약속의 성취</div>
+              </div>
+              <ul class="items">
+                <li><span class="dot"></span> 11:00 주일 연합예배</li>
+                <li><span class="dot"></span> 15:00 수련회 마무리</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-area">
+          <button class="cta" id="registerBtn" type="button">
+            지금 바로 등록하기
+          </button>
+          <p class="cta-sub">클릭 시 Google Form이 새 탭에서 열립니다</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <script src="./app.js"></script>
 </body>
