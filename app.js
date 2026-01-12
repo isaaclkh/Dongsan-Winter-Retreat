@@ -1,3 +1,8 @@
+const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches; // 모바일 터치
+if (!isCoarsePointer) {
+  // wheel 인터셉트 로직 실행
+}
+
 // 등록 버튼: 구글폼 새 탭
 const registrationUrl = "https://forms.gle/JJnuGSsyHJ76f8dCA";
 document.getElementById("registerBtn")?.addEventListener("click", () => {
