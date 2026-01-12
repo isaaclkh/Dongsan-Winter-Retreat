@@ -179,7 +179,7 @@ body::before{
   width: 78px;
   height: 7px;
   border-radius: 999px;
-  margin: 0 auto 14px;
+  margin: 0 auto 30px;
   background: linear-gradient(90deg,
     rgba(255,79,216,.85),
     rgba(124,58,237,.85),
