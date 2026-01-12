@@ -82,7 +82,7 @@ body::before{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding: 26px 18px 8px;
+  /* padding: 26px 18px 8px; */
   overflow:hidden;
 }
 
